@@ -1,0 +1,14 @@
+模型类型	位置编码	transformer结构	多头机制	ff层设计	归一化层选择	激活函数	是否使用bias
+baichuan2-7b	RoPE	串行	传统方式	gated形式	RMSnorm/pre norm	SiLU	无bias
+baichuan2-13b	Alibi	串行	传统方式	gated形式	RMSnorm/pre norm	SiLU	无bias
+chatglm2	RoPE	串行	multi query	gated形式	RMSnorm/pre norm	SiLU	qkv有bias，其他线性层无bias
+llama2	RoPE	串行	multi query	gated形式	RMSnorm/pre norm	SiLU	无bias
+moss	RoPE	平行	传统方式	传统方式	LayerNorm	gelu_new	sa无bias, ff有bias
+							
+chatglm3	RoPE	串行	multi query	gated形式	RMSnorm/pre norm	SiLU	qkv有bias，其他线性层无bias
+deepseek	RoPE	串行	MLA（多头潜在注意力）	gated形式	RMSnorm/pre norm	silu/sigmoid	无bias
+gemma	RoPE	串行	传统方式	gated形式	RMSnorm/pre norm	silu	无bias
+qwen	RoPE	串行	传统方式	gated形式	RMSnorm/pre norm	silu	无bias
+dbrx	RoPE	串行	传统方式	gated形式	LayerNorm/pre norm	GLU	无bias
+grok1	RoPE	串行	传统方式	gated形式	RMSnorm/sandwich LN	GELU	无bias
+mixtral	RoPE	串行	传统方式	gated形式	RMSnorm/pre norm	silu	无bias
