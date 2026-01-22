@@ -6,7 +6,7 @@
 在项目根目录执行：
 
 ```bash
-python train_lora_bert_trainer.py \
+train_lora_bert_trainer.py \
   --model_name bert-base-chinese \
   --max_length 128 \
   --epochs 10 \
