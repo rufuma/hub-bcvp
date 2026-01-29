@@ -98,7 +98,7 @@ def cal_cash_value(product_id: str, invested_amt: int, invested_years: int = Non
         coverage_amt = cash_value * coverage_rate * (1 + years / 1000)  # 保额计算
         item["product_id"] = product_id
         item["invested_amt"] = invested_amt
-        item["invested_years"] = invested_years
+        item["invested_years"] = years
         item["cash_value"] = cash_value
         item["coverage_amt"] = coverage_amt
         cash_value_list.append(item)
@@ -131,6 +131,6 @@ def compare_products(product_ids: list, invested_amt: int, invested_years: int):
             "insured_amount": invested_amt,
             "years": invested_years,
         },
-        "products": comparisons
+        "product_compare_detail": comparisons
     }
     return json.dumps(result, ensure_ascii=False)
