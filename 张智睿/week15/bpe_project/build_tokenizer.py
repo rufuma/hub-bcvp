@@ -14,8 +14,7 @@ from bpe_trainer import BPETrainer, BPETrainConfig
 
 
 def main():
-    # 你在 PyCharm 里运行时，可以把《长安乱.txt》复制到项目目录下，
-    # 或者把这里的路径改成你本地的文件路径。
+  
     corpus_path = os.path.join(os.path.dirname(__file__), "..", "data", "长安乱.txt")
     corpus_path = os.path.abspath(corpus_path)
 
