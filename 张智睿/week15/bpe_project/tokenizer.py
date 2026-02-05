@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 BPE 分词器：支持 encode/decode，以及从 tokenizer.json 加载。
-仅使用 Python 标准库。
 """
 
 from __future__ import annotations
