@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-demo_encode_decode.py
 演示 encode / decode 两个功能：
 - 输入一句中文，输出 token 序列（id 列表）
 - 输入 token 序列，输出对应中文
