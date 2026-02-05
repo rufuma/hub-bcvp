@@ -1,15 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-bpe_trainer.py
 仅使用 Python 标准库实现一个简化版的 BPE（Byte Pair Encoding）训练器。
-
-特别说明（为满足“50词表规模”的要求做了取舍）：
-- 传统 BPE 会把“所有出现过的字符”都放进初始词表，这会导致中文语料初始词表巨大。
-- 本项目为了严格得到 50 个 token 的词表，会先选取“语料中最常见的若干字符”作为初始字母表，
-  其余字符统一映射为 <unk>（因此极少数字符可能无法完美还原）。
-- 之后再通过 BPE merges 补足到指定词表大小（50）。
-
-如果你希望“所有字符都可逆”，可以把 vocab_size 调大，或改成 byte-level BPE。
+ 
 """
 
 from __future__ import annotations
@@ -23,10 +15,7 @@ from typing import Dict, List, Tuple, Iterable, Optional
 
 def clean_corpus_text(text: str) -> str:
     """
-    针对《长安乱.txt》这类网络下载文本做保守清洗：
-    1) 去掉明显的下载站广告/网址行
-    2) 统一换行
-    3) 压缩多余空白，但保留换行（避免破坏段落结构）
+    数据清洗
     """
     text = text.replace("\r\n", "\n").replace("\r", "\n")
 
